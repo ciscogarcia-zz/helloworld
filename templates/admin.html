@@ -7,8 +7,8 @@
 
   <body>
     <div id="registration_data">
-      <table border="1" id="data_table">
-	<tr>
+      <table id="data_table">
+	<tr id="data_header">
 	  <th>First Name</th>
 	  <th>Last Name</th>
 	  <th>Address 1</th>
@@ -19,6 +19,25 @@
 	  <th>Country</th>
 	  <th>Date</th>
 	</tr>
+	{% set color = 'data_grey' %}
+	{% for user in registered_users %}
+	<tr id="{{ color }}">
+	  <td>{{ user['fname'] }}</td>
+	  <td>{{ user['lname'] }}</td>
+	  <td>{{ user['address1'] }}</td>
+	  <td>{{ user['address2'] }}</td>
+	  <td>{{ user['city'] }}</td>
+	  <td>{{ user['state'] }}</td>
+	  <td>{{ user['zip'] }}</td>
+	  <td>{{ user['country'] }}</td>
+	  <td>{{ user['registration_date'] }}</td>
+	</tr>
+	{% if color == 'data_grey' %}
+	{% set color = 'data_cyan' %}
+	{% else %}
+	{% set color = 'data_grey' %}
+	{% endif %}
+	{% endfor %}
       </table>
     </div>
   </body>
