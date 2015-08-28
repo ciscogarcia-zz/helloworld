@@ -11,4 +11,22 @@ body {
 
 #data_table {
     margin: auto;
+    background-color: blue;
+    border-spacing: 0px;
+}
+
+#data_header {
+    background-color: royalblue;
+}
+
+#data_grey {
+    background-color: grey;
+}
+
+#data_cyan {
+    background-color: cyan;
+}
+
+td, th {
+    padding: 10px;
 }
