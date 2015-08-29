@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Registration</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+  </head>
+
+  <body>
+    <div id="registration_div">
+      <form id="registration_form"  method="post">
+	<table border="0" id="registration_table">
+	  <tr>
+	    <th colspan="2" align="center" id="registration_header">Registration</th>
+	  </tr>
+	  <tr>
+	    <td>First Name</td>
+	    <td><input type="text" id="fname" name="fname" value="{{ user['fname'] }}" /> {{ messages['fname'] }}</td>
+	  </tr>
+	  <tr>
+	    <td>Last Name</td>
+	    <td><input type="text" id="lname" name="lname" value="{{ user['lname'] }}" /> {{ messages['lname'] }}</td>
+	  </tr>
+	  <tr>
+	    <td>Address 1</td>
+	    <td><input type="text" id="address1" name="address1" value="{{ user['address1'] }}" /> {{ messages['address1'] }}</td>
+	  </tr>
+	  <tr>
+	    <td>Address 2 (Optional)</td>
+	    <td><input type="text" id="address2" name="address2" value="{{ user['address2'] }}"/> {{ messages['address2'] }}</td>
+	  </tr>
+	  <tr>
+	    <td>City</td>
+	    <td><input type="text" id="city" name="city" value="{{ user['city'] }}" /> {{ messages['city'] }}</td>
+	  </tr>
+	  <tr>
+	    <td>State</td>
+	    <td><input type="text" id="state" name="state" value="{{ user['state'] }}" /> {{ messages['state'] }}</td>
+	  </tr>
+	  <tr>
+	    <td>Zip</td>
+	    <td><input type="text" id="zip" name="zip" value="{{ user['zip'] }}" /> {{ messages['zip'] }}</td>
+	  </tr>
+	  <tr>
+	    <td>Country</td>
+	    <td><select id="country" name="country"><option value="US">US</option></select> {{ messages['country'] }}</td>
+	  </tr>
+	  <tr>
+	    <td colspan="2" align="center"><input type="submit" id="submit" /></td>
+	  </tr>
+	</table>
+      </form>
+    </div>
+  </body>
+</html>
