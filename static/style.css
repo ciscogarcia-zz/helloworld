@@ -9,13 +9,30 @@ body {
     padding: 10px;
 }
 
+#registration_div {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
 #data_table {
     margin: auto;
     background-color: blue;
     border-spacing: 0px;
 }
 
+#registration_table {
+    margin: auto;
+    background-color: #C0C0C0;
+    border-spacing: 0px;
+    white-space: nowrap;
+}
+
 #data_header {
+    background-color: royalblue;
+}
+
+#registration_header {
     background-color: royalblue;
 }
 
