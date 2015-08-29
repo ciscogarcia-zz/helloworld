@@ -53,6 +53,8 @@ def validate_input(form):
                 continue
             if len(value) != 5 and len(value) != 10:
                 messages[field] = "* Zip code must either be 5 digits or 9 digits with a hyphen. *"
+            if not value.isnumeric():
+                messages[field] = "* Zip code must be all numeric *"
             if len(value) == 10:
                 if "-" not in value:
                     messages[field] = "* You must have a hyphen in the zip code. *"
